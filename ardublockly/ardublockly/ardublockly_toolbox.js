@@ -233,8 +233,9 @@ Ardublockly.TOOLBOX_XML =
 '     <category id="catLED" name="LED">' +
 '        <block type="3_led"></block>'+
 '      </category>'+
-'     <category id="catUltra_sonic" name="Ultra_sonic">' +
+'      <category id="catUltra_sonic" name="Ultra_sonic">' +
 '        <block type="ultra_sonic"></block>'+
+'        <block type="ultra_output"></block>'+
 '      </category>'+
 '     <category id="catAudio" name="Audio">' +
 '       <block type="io_tone">' +
@@ -284,7 +285,9 @@ Ardublockly.TOOLBOX_XML =
 '     </category>' +
 '      <category id="catdht" name="dht">' +
 '        <block type="dht"></block>'+
-'     </category>' +
+'        <block type="dht_temp"></block>'+
+'        <block type="dht_humid"></block>'+
+'      </category>' +
 '      <category id="catlcd" name="lcd">' +
 '        <block type="lcd"></block>'+
 '        <block type="lcd_text"></block>'+
@@ -300,6 +303,30 @@ Ardublockly.TOOLBOX_XML =
 '        <block type="sevensegment"></block>'+
 '        <block type="setbrightness"></block>'+
 '        <block type="showNumberDec"></block>'+
+'     </category>'+
+'  </category>'+
+'  <sep></sep>'+
+'  <category id="catAirPurifier" name="AirPurifier">' +
+'      <category id="catlcd" name="lcd">' +
+'        <block type="lcd"></block>'+
+'        <block type="lcd_text"></block>'+
+'        <block type="lcd_clear"></block>'+
+'        <block type="lcd_backlight"></block>'+
+'        <block type="lcd_noBacklight"></block>'+
+'        <block type="lcd_scrollDisplayRight"></block>'+
+'        <block type="lcd_scrollDisplayLeft"></block>'+
+'        <block type="lcd_autoscroll"></block>'+
+'        <block type="lcd_write"></block>'+
+'     </category>' +
+'     <category id="catFineDust" name="FineDust">' +
+'        <block type="finedust"></block>' +
+'        <block type="finedust_output"></block>' +
+'     </category>' +
+'      <category id="catdht" name="dht">' +
+'        <block type="dht"></block>'+
+'        <block type="dht_temp"></block>'+
+'        <block type="dht_humid"></block>'+
+'      </category>' +
 '  </category>'+
 '  <sep></sep>'+
 '</xml>';
