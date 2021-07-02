@@ -64,11 +64,10 @@ Blockly.Blocks['illuminance_digital'] = {
    */
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/AnalogRead');
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("C:/Users/BP 김현지/Desktop/진행/새 폴더/새 폴더/blockly_test/ardublockly/test/1.png", 15, 15, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput();
     this.appendDummyInput()
         .appendField("조도센서 ")
-        .appendField(new Blockly.FieldImage("C:/Users/BP 김현지/Desktop/진행/새 폴더/새 폴더/blockly_test/ardublockly/test/1.png", 15, 15, { alt: "*", flipRtl: "FALSE" }));
+        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, { alt: "*", flipRtl: "FALSE" }));
         //한줄에 이미지 두개 추가 안됌 첫째줄에 센서 이미지 , 둘째줄에 색인 이미지
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_DIGITALREAD)

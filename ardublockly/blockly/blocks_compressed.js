@@ -2076,7 +2076,7 @@ Blockly.Blocks.variables.HUE = 330;
 Blockly.Blocks.variables_get = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-    this.setColour("#f8000e");
+    this.setColour("#ed0a3f");
     this.appendDummyInput().appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME), "VAR");
     this.setOutput(!0);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
@@ -2106,7 +2106,7 @@ Blockly.Blocks.variables_get = {
 };
 Blockly.Blocks.variables_set = {
   init: function() {
-    this.setColour("#f8000e");
+    this.setColour("#ed0a3f");
     this.jsonInit({
       message0: Blockly.Msg.VARIABLES_SET,
       args0: [{
@@ -2139,7 +2139,7 @@ Blockly.Blocks.io.HUE = 250;
 Blockly.Blocks.io_digitalwrite = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/DigitalWrite");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendValueInput("STATE").appendField(Blockly.Msg.ARD_DIGITALWRITE).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins), "PIN").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.BOOLEAN.checkList);
     this.setInputsInline(!1);
     this.setPreviousStatement(!0, null);
@@ -2153,7 +2153,7 @@ Blockly.Blocks.io_digitalwrite = {
 Blockly.Blocks.io_digitalread = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/DigitalRead");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendDummyInput().appendField(Blockly.Msg.ARD_DIGITALREAD).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins), "PIN");
     this.setOutput(!0, Blockly.Types.BOOLEAN.output);
     this.setTooltip(Blockly.Msg.ARD_DIGITALREAD_TIP)
@@ -2169,7 +2169,7 @@ Blockly.Blocks.io_digitalread = {
 Blockly.Blocks.io_builtin_led = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/DigitalWrite");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendValueInput("STATE").appendField(Blockly.Msg.ARD_BUILTIN_LED).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.builtinLed), "BUILT_IN_LED").appendField("to").setCheck(Blockly.Types.BOOLEAN.checkList);
     this.setInputsInline(!1);
     this.setPreviousStatement(!0, null);
@@ -2187,7 +2187,7 @@ Blockly.Blocks.io_builtin_led = {
 Blockly.Blocks.io_analogwrite = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/AnalogWrite");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendValueInput("NUM").appendField(Blockly.Msg.ARD_ANALOGWRITE).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.pwmPins), "PIN").appendField(Blockly.Msg.ARD_WRITE_TO).setCheck(Blockly.Types.NUMBER.output);
     this.setInputsInline(!1);
     this.setPreviousStatement(!0, null);
@@ -2204,7 +2204,7 @@ Blockly.Blocks.io_analogwrite = {
 Blockly.Blocks.io_analogread = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/AnalogRead");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendDummyInput().appendField(Blockly.Msg.ARD_ANALOGREAD).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.analogPins), "PIN");
     this.setOutput(!0, Blockly.Types.NUMBER.output);
     this.setTooltip(Blockly.Msg.ARD_ANALOGREAD_TIP)
@@ -2220,7 +2220,7 @@ Blockly.Blocks.io_analogread = {
 Blockly.Blocks.io_highlow = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/Constants");
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.appendDummyInput().appendField(new Blockly.FieldDropdown([
       [Blockly.Msg.ARD_HIGH, "HIGH"],
       [Blockly.Msg.ARD_LOW, "LOW"]
@@ -2239,7 +2239,7 @@ Blockly.Blocks.io_pulsein = {
     this.appendDummyInput().appendField(Blockly.Msg.ARD_PULSEON).appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins), "PULSEPIN");
     this.setOutput(!0);
     this.setInputsInline(!0);
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.setTooltip(Blockly.Msg.ARD_PULSE_TIP);
     this.setHelpUrl("https://www.arduino.cc/en/Reference/PulseIn")
   },
@@ -2257,7 +2257,7 @@ Blockly.Blocks.io_pulsetimeout = {
     this.appendDummyInput().appendField(Blockly.Msg.ARD_PULSETIMEOUT_MS);
     this.setOutput(!0);
     this.setInputsInline(!0);
-    this.setColour("#cc00ff");
+    this.setColour("#8f47b3");
     this.setTooltip(Blockly.Msg.ARD_PULSETIMEOUT_TIP);
     this.setHelpUrl("https://www.arduino.cc/en/Reference/PulseIn")
   },
@@ -2678,7 +2678,7 @@ Blockly.Blocks.variables.HUE = 330;
 Blockly.Blocks.variables_set_type = {
   init: function() {
     this.setHelpUrl("http://arduino.cc/en/Reference/HomePage");
-    this.setColour("#f8000e");
+    this.setColour("#ed0a3f");
     this.appendValueInput("VARIABLE_SETTYPE_INPUT");
     this.appendDummyInput().appendField(Blockly.Msg.ARD_VAR_AS).appendField(new Blockly.FieldDropdown(Blockly.Types.getValidTypeArray()), "VARIABLE_SETTYPE_TYPE");
     this.setInputsInline(!0);

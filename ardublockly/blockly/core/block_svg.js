@@ -89,6 +89,7 @@ goog.inherits(Blockly.BlockSvg, Blockly.Block);
 
 /**
  * Height of this block, not including any statement blocks above or below.
+ * 블록의 기본 높이 설정 -> 갑을 변경해도 블록 자체 크기에는 변함 없음
  */
 Blockly.BlockSvg.prototype.height = 0;
 /**

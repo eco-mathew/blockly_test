@@ -17,6 +17,8 @@ goog.provide('Blockly.Blocks.io');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
+Blockly.Blocks.time.HUE = 120;
+
 Blockly.Blocks['dht'] = {
   init: function() {
     this.appendDummyInput();
@@ -28,13 +30,44 @@ Blockly.Blocks['dht'] = {
         .appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins), 'dhtpin');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(120);
- this.setTooltip("온습도센서입니다.");
- this.setHelpUrl("");
-},
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.time.HUE);
+    this.setTooltip("온습도센서를 라이브러리를 이용해 정의합니다.");
+    this.setHelpUrl("");
+  },
 
-updateFields: function() {
-  Blockly.Arduino.Boards.refreshBlockFieldDropdown(
+  updateFields: function() {
+    Blockly.Arduino.Boards.refreshBlockFieldDropdown(
       this, 'dhtpin', 'digitalPins');
-}
+  }
+};
+
+Blockly.Blocks['dht_temp'] = {
+  init: function() {
+    this.appendDummyInput();
+    this.appendDummyInput()
+        .appendField("온도값");
+    this.setInputsInline(true);
+    this.setOutput(true, Blockly.Types.LARGE_NUMBER.output);
+    this.setColour(Blockly.Blocks.time.HUE);
+    this.setTooltip("온습도 센서로 측정한 온도값을 출력합니다.");
+  },
+  getBlockType: function() {
+    return Blockly.Types.LARGE_NUMBER;
+  }
+};
+
+Blockly.Blocks['dht_humid'] = {
+  init: function() {
+    this.appendDummyInput();
+    this.appendDummyInput()
+        .appendField("습도값");
+    this.setInputsInline(true);
+    this.setOutput(true, Blockly.Types.LARGE_NUMBER.output);
+    this.setColour(Blockly.Blocks.time.HUE);
+    this.setTooltip("온습도 센서로 측정한 습도값을 출력합니다.");
+  },
+  getBlockType: function() {
+    return Blockly.Types.LARGE_NUMBER;
+  }
 };

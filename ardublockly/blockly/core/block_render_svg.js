@@ -32,6 +32,12 @@ goog.require('Blockly.BlockSvg');
 
 // UI constants for rendering blocks.
 /**
+* Grid unit to pixels conversion
+* @const
+*/
+Blockly.BlockSvg.GRID_UNIT = 4;
+
+/**
  * Horizontal space between elements.
  * @const
  */
@@ -65,12 +71,12 @@ Blockly.BlockSvg.TAB_WIDTH = 8;
  * Width of vertical tab (inc left margin).
  * @const
  */
-Blockly.BlockSvg.NOTCH_WIDTH = 30;
+Blockly.BlockSvg.NOTCH_WIDTH = 20;
 /**
  * Rounded corner radius.
  * @const
  */
-Blockly.BlockSvg.CORNER_RADIUS = 8;
+Blockly.BlockSvg.CORNER_RADIUS = 10;
 /**
  * Do blocks with no previous or output connections have a 'hat' on top?
  * @const
@@ -80,7 +86,7 @@ Blockly.BlockSvg.START_HAT = false;
  * Height of the top hat.
  * @const
  */
-Blockly.BlockSvg.START_HAT_HEIGHT = 15;
+Blockly.BlockSvg.START_HAT_HEIGHT = 150;
 /**
  * Path of the top hat's curve.
  * @const
@@ -118,7 +124,7 @@ Blockly.BlockSvg.DISTANCE_45_OUTSIDE = (1 - Math.SQRT1_2) *
  * SVG path for drawing next/previous notch from left to right.
  * @const
  */
-Blockly.BlockSvg.NOTCH_PATH_LEFT = 'l 6,4 3,0 6,-4';
+Blockly.BlockSvg.NOTCH_PATH_LEFT = '6 1,3 4,6 0,-20';
 /**
  * SVG path for drawing next/previous notch from left to right with
  * highlighting.
@@ -129,7 +135,7 @@ Blockly.BlockSvg.NOTCH_PATH_LEFT_HIGHLIGHT = 'l 6,4 3,0 6,-4';
  * SVG path for drawing next/previous notch from right to left.
  * @const
  */
-Blockly.BlockSvg.NOTCH_PATH_RIGHT = 'l -6,4 -3,0 -6,-4';
+Blockly.BlockSvg.NOTCH_PATH_RIGHT = '6 1,3 4,6 0,-20';
 /**
  * SVG path for drawing jagged teeth at the end of collapsed blocks.
  * @const

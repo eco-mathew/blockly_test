@@ -33,14 +33,14 @@ Blockly.Blocks['lcd'] = {
         .appendField(new Blockly.FieldNumber(0, 0, 15), "x")
         .appendField(" y값: ")
         .appendField(new Blockly.FieldNumber(0, 0, 1), "y");
-    this.appendDummyInput()
-        .appendField("  화면출력")
-        .appendField(new Blockly.FieldTextInput("변수"), "content");
+    this.appendValueInput('VALUE')
+        .setCheck(null)
+        .appendField(' 출력');
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(160);
- this.setTooltip("12C LCD 센서입니다.");
+ this.setTooltip("I2C LCD 1602 센서입니다.");
  this.setHelpUrl("");
 }
 };
@@ -59,7 +59,7 @@ Blockly.Blocks['lcd_text'] = {
         .appendField(" y값: ")
         .appendField(new Blockly.FieldNumber(0, 0, 1), "y");
     this.appendDummyInput()
-        .appendField("  화면출력")
+        .appendField("  출력")
         .appendField(new Blockly.FieldTextInput("문자열"), "content2");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);

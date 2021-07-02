@@ -29,6 +29,7 @@ Blockly.Blocks['ultra_sonic'] = {
     this.appendDummyInput()
         .appendField("  Echo#")
         .appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.digitalPins), 'Echo');
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(210);
@@ -45,4 +46,17 @@ Blockly.Blocks['ultra_sonic'] = {
       Blockly.Arduino.Boards.refreshBlockFieldDropdown(
           this, 'Echo', 'digitalPins');
     }
+};
+
+Blockly.Blocks['ultra_output'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("거리 값");
+    this.setOutput(true, Blockly.Types.LARGE_NUMBER.output);
+    this.setColour(210);
+    this.setTooltip("초음파 센서를 이용한 거리 값을 출력합니다.");
+  },
+  getBlockType: function() {
+    return Blockly.Types.LARGE_NUMBER;
+  }
 };
